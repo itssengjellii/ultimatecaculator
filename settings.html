@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Settings · Ultimate Calculator</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%234f6bff'/><text x='50' y='68' font-size='56' text-anchor='middle' fill='white' font-family='sans-serif'>∑</text></svg>">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/pages.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="settings">
+<div class="bg" aria-hidden="true"><i></i><i></i><i></i></div>
+<header class="topbar glass">
+  <a class="brand" href="index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset=".55" stop-color="#4f6bff"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs><rect width="32" height="32" rx="9" fill="url(#lg)"/><rect x="7" y="6" width="18" height="6" rx="2" fill="#fff" opacity=".95"/><g fill="#fff" opacity=".85"><circle cx="10" cy="17" r="1.8"/><circle cx="16" cy="17" r="1.8"/><circle cx="22" cy="17" r="1.8"/><circle cx="10" cy="23" r="1.8"/><circle cx="16" cy="23" r="1.8"/><circle cx="22" cy="23" r="1.8"/></g></svg><span>Ultimate Calculator</span></a>
+  <nav class="nav" aria-label="Main"><a href="index.html" data-nav="calculator">Calculator</a><a href="history.html" data-nav="history">History</a><a href="guide.html" data-nav="guide">Guide</a><a href="settings.html" data-nav="settings">Settings</a></nav>
+  <div class="actions">
+    <button class="icon-btn" id="themeToggle" aria-label="Toggle theme" title="Toggle theme"><svg viewBox="0 0 24 24" id="themeIcon"></svg></button>
+  </div>
+</header>
+<main class="page">
+  <h1>Settings</h1>
+  <p class="lead">Changes apply instantly and are remembered on this device.</p>
+  <section class="card glass"><h2>Appearance</h2>
+    <div class="row"><div>Theme<span class="sub">Dark is the default. Light suits bright rooms.</span></div><div class="seg" data-key="theme"><button data-val="dark">Dark</button><button data-val="light">Light</button></div></div>
+    <div class="row"><div>Calculator mode<span class="sub">The mode the calculator opens in.</span></div><div class="seg" data-key="mode"><button data-val="standard">Standard</button><button data-val="scientific">Scientific</button></div></div>
+  </section>
+  <section class="card glass"><h2>Calculation</h2>
+    <div class="row"><div>Angle unit<span class="sub">Used by sin, cos, tan and their inverses.</span></div><div class="seg" data-key="angle"><button data-val="deg">Degrees</button><button data-val="rad">Radians</button></div></div>
+    <div class="row"><div>Significant digits<span class="sub">How many digits results show before rounding.</span></div><select data-key="precision" aria-label="Significant digits"><option>6</option><option>8</option><option>10</option><option>12</option><option>14</option></select></div>
+    <div class="row"><div>Show results as fractions<span class="sub">0.75 appears as 3/4 when an exact fraction exists.</span></div><input type="checkbox" class="switch" data-key="frac" aria-label="Show results as fractions"></div>
+  </section>
+  <section class="card glass"><h2>Data</h2>
+    <div class="row"><div>Remember history<span class="sub">Turning this off also deletes saved history.</span></div><input type="checkbox" class="switch" data-key="saveHist" aria-label="Remember history"></div>
+    <div class="row"><div>Delete saved calculations</div><button class="btn danger" id="clearData">Delete history</button></div>
+    <div class="row"><div>Reset all settings<span class="sub">Restores every option to its default.</span></div><button class="btn" id="resetAll">Reset</button></div>
+  </section>
+</main>
+<footer class="foot">Every calculation runs locally in your browser. Nothing is sent anywhere.</footer>
+<div class="toast" id="toast" role="status"></div>
+<script src="js/shared.js"></script>
+<script src="js/pages.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>History · Ultimate Calculator</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%234f6bff'/><text x='50' y='68' font-size='56' text-anchor='middle' fill='white' font-family='sans-serif'>∑</text></svg>">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/pages.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="history">
+<div class="bg" aria-hidden="true"><i></i><i></i><i></i></div>
+<header class="topbar glass">
+  <a class="brand" href="index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset=".55" stop-color="#4f6bff"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs><rect width="32" height="32" rx="9" fill="url(#lg)"/><rect x="7" y="6" width="18" height="6" rx="2" fill="#fff" opacity=".95"/><g fill="#fff" opacity=".85"><circle cx="10" cy="17" r="1.8"/><circle cx="16" cy="17" r="1.8"/><circle cx="22" cy="17" r="1.8"/><circle cx="10" cy="23" r="1.8"/><circle cx="16" cy="23" r="1.8"/><circle cx="22" cy="23" r="1.8"/></g></svg><span>Ultimate Calculator</span></a>
+  <nav class="nav" aria-label="Main"><a href="index.html" data-nav="calculator">Calculator</a><a href="history.html" data-nav="history">History</a><a href="guide.html" data-nav="guide">Guide</a><a href="settings.html" data-nav="settings">Settings</a></nav>
+  <div class="actions">
+    <button class="icon-btn" id="themeToggle" aria-label="Toggle theme" title="Toggle theme"><svg viewBox="0 0 24 24" id="themeIcon"></svg></button>
+  </div>
+</header>
+<main class="page">
+  <h1>History</h1>
+  <p class="lead">Every calculation you save with = lives here. Search it, reopen one in the calculator, or export the lot.</p>
+  <div class="toolbar">
+    <input class="search" id="hsearch" type="search" placeholder="Search expressions and results" aria-label="Search history">
+    <button class="btn" id="hexport">Export CSV</button>
+    <button class="btn danger" id="hclear">Clear all</button>
+  </div>
+  <div class="count" id="hcount" aria-live="polite"></div>
+  <ul class="hgrid" id="hgrid"></ul>
+  <div class="state" id="hstate"></div>
+</main>
+<footer class="foot">Every calculation runs locally in your browser. Nothing is sent anywhere.</footer>
+<div class="toast" id="toast" role="status"></div>
+<script src="js/shared.js"></script>
+<script src="js/pages.js"></script>
+</body>
+</html>
